@@ -10,36 +10,39 @@ public class PrimeFactorization {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        File input = new File("C:\\Users\\Rajat_Chikkodikar\\Desktop\\My files\\Projects\\GSIncubation\\src\\main\\java\\mathematics\\scratch.txt");
+        File input = new File("C:\\Users\\Rajat_Chikkodikar\\Desktop\\My files\\Projects\\GSIncubation\\src\\main\\java\\mathematics\\_scratch.txt");
         Scanner sc = new Scanner(input);
 
-        int num = sc.nextInt();
+        double num = sc.nextDouble();
         setUpPrimes();
 
         List<Integer> res = primeFac(num);
         System.out.println(res);
     }
 
-    public static List<Integer> primeFac(int num) {
+    public static List<Integer> primeFac(double num) {
         List<Integer> factors = new ArrayList<>();
 
-        int temp = num,i=0,prime=1;
+        int i=0,prime=1;
+        double temp = num;
 
         while (temp!=1) {
             try {
                 prime = primes.get(i);
             } catch (IndexOutOfBoundsException e) {
-                boolean isPrime=false;
+                boolean isPrime=true;
                 for(int j=primes.get(i-1)+1;j<=num;j++) {
-                    for(int k=2;k*k<j;k++) {
-                        if(j%k != 0) {
-                            isPrime = true;
+                    for(int k=2;k*k<=j;k++) {
+                        if(j%k == 0) {
+                            isPrime = false;
+                            break;
                         }
                     }
                     if(isPrime) {
                         primes.add(j);
+                        break;
                     }
-                    isPrime=false;
+                    isPrime=true;
                 }
                 prime = primes.get(i);
             } catch (Exception e) {

@@ -31,5 +31,15 @@ class PrimeFactorizationTest {
 
         assertEquals(expected,actual);
     }
+    @Test
+    void veryBigNumber() {
+        Integer[] exp = {73, 79, 113, 223, 313};
+        PrimeFactorization.setUpPrimes();
+
+        List<Integer> expected = Arrays.asList(exp);
+        List<Integer> actual = PrimeFactorization.primeFac(45485984129.0);
+
+        assertEquals(expected,actual);
+    }
 
 }

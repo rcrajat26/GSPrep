@@ -8,7 +8,7 @@ public class DotProduct {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        File input = new File("C:\\Users\\Rajat_Chikkodikar\\Desktop\\My files\\Projects\\GSIncubation\\src\\main\\java\\mathematics\\scratch.txt");
+        File input = new File("C:\\Users\\Rajat_Chikkodikar\\Desktop\\My files\\Projects\\GSIncubation\\src\\main\\java\\mathematics\\_scratch.txt");
         Scanner sc = new Scanner(input);
 
         int arrSize = sc.nextInt();

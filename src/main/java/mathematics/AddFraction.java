@@ -14,7 +14,7 @@ public class AddFraction {
      */
 
     public static void main(String[] args) throws FileNotFoundException {
-        File input = new File("C:\\Users\\Rajat_Chikkodikar\\Desktop\\My files\\Projects\\GSIncubation\\src\\main\\java\\main\\scratch.txt");
+        File input = new File("C:\\Users\\Rajat_Chikkodikar\\Desktop\\My files\\Projects\\GSIncubation\\src\\main\\java\\mathematics\\scratch.txt");
         Scanner sc = new Scanner(input);
         int[] num1 = new int[2];
         int[] num2 = new int[2];

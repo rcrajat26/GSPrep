@@ -15,11 +15,11 @@ public class isPow10 {
     }
 
     static boolean isPow(long num) {
-        if(num == 1 || num == 10 || num == 100 || num == 1000 || num == 10000|| num == 100000 || num == 1000000 || num == 10000000 || num == 100000000 || num == 1000000000) {
+        if(num == 1 || num == 10 || num == 100 || num == 1000 || num == 10000|| num == 100000 || num == 1000000 || num == 10000000 || num == 100000000 || num == 1000000000 || num == 10000000000L || num == 100000000000L) {
             return true;
         }
         else {
-            if(num%1000000 == 0) {
+            if(num%100000000000L == 0) {
                 return true;
             }
             else return false;

@@ -18,29 +18,25 @@ public class GroupAnagrams {
     private static Set<Set<String>> grpAnagrams(String inp) {
 
         Set<Set<String>> group = new HashSet<>();
-        Set<String> sorted = new HashSet<>();
-
-        List<String> l = new ArrayList<>();
-
+        Map<String,Set<String>> sorted = new HashMap<>();
 
         String[] words = inp.split("\\s+");
         for(String word:words)
         {
             String currWord = word;
             word = sort(word);
-            if(!sorted.contains(word)) {
+            if(!sorted.containsKey(word)) {
                 Set<String> set = new HashSet<>();
-                sorted.add(word);
                 set.add(currWord);
-                group.add(set);
+                sorted.put(word,set);
             }
             else {
-                Set<String> s;
-                for(Set<String> set:group) {
-
-                }
+                Set<String> s = sorted.get(word);
+                s.add(currWord);
             }
         }
+
+        sorted.values().forEach(v->group.add(v));
         return group;
     }
 

@@ -2,10 +2,7 @@ package string;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class GroupAnagrams {
 
@@ -22,6 +19,9 @@ public class GroupAnagrams {
 
         Set<Set<String>> group = new HashSet<>();
         Set<String> sorted = new HashSet<>();
+
+        List<String> l = new ArrayList<>();
+
 
         String[] words = inp.split("\\s+");
         for(String word:words)
